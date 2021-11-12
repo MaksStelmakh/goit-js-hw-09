@@ -28,6 +28,8 @@ const options = {
         const time = convertMs(deltaTime)
         if (timer - new Date() > 0) {
             updateTime(time)
+            startTimerButton.setAttribute(`disabled`, true)
+            input.setAttribute(`disabled`, true)
         } else {
             clearInterval(startTimer)
             return Notify.success('Time is up!');
